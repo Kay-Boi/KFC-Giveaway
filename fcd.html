@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Famous Countdown</title>
+  <link rel="stylesheet" href="fcd.css">
+</head>
+
+<body>
+<marquee><h1>Kay Boi F.C Annual Giveaway</h1></marquee>
+<h3>K.F.C Presents thier 12th Annual Giveaway</h3>
+<p> <u>How to Participate:</u> </p>
+<div class="box"> 
+  <strong>
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
+  Cumque quo porro, quod accusantium maiores vel minima pariatur provident rem! <br>
+  Harum ullam optio nisi. Impedit dicta nulla expedita officiis? Aliquam, modi a! <br>
+   Maiores exercitationem consectetur accusantium fugit perspiciatis, <br>
+   quasi odit fuga placeat sequi, eaque unde laudantium recusandae sint <br>
+   labore deserunt ullam aut non optio! Tempore autem harum accusamus officiis dolore. 
+  </strong>
+ </div>
+ <img src="pics/1000357650-removebg-preview.png" alt="">
+ <h4>The Giveaway Ends in:</h4>
+<div id="countdown"></div>
+
+<script>
+  
+  var countdownDate = new Date("Mar 12, 2024 03:06:09").getTime();
+  var x = setInterval(function() {
+  var now = new Date().getTime();
+  var distance = countdownDate - now;
+
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById("countdown").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+    if (distance < 0) {
+      clearInterval(x);
+      document.getElementById("countdown").innerHTML = "Kay Boi";
+    }
+  }, 1000);
+</script>
+
+</body>
+</html>
